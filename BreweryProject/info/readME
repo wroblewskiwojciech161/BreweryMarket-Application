@@ -1,0 +1,22 @@
+KONWERNCJE ZAPISU
+
+KOMPONENTY JAVA FX
+
+- [znaczce litery komponentu] _ [nazwa pola]
+
+  dla przykadu textField  z dana username   tf_username
+
+INFORMACJE OGOLNE
+...
+
+
+//// trzeba napisac
+-metody spr czy pola sa wypelnione
+-metody spr czy login i id istnieja 
+-dodac label ktory to wyswietli przy logowaniu
+-dodac label ktory wystetli nieprawidlowe dane przy rejestracji
+
+
+-poziom brewery  ( dodaje usuwa modyfikuje listuje ) swoje browary
+-poziom uzytkowunik tyko lisstuje
+-poziom administrator (wszystko w tym usuwa uzytkownikow i browary modyfikuje hasla )

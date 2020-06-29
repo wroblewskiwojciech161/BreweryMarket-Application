@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="639.0" prefWidth="1667.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Admin_Controller">
+    <children>
+        <StackPane prefHeight="150.0" prefWidth="200.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+            <effect>
+                <DropShadow />
+            </effect>
+            <children>
+                <HBox prefHeight="571.0" prefWidth="1342.0">
+                    <children>
+                        <VBox prefHeight="613.0" prefWidth="973.0" style="-fx-background-color: #900C3F;" HBox.hgrow="ALWAYS">
+                            <children>
+                                <VBox prefHeight="0.0" prefWidth="603.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                              <HBox prefHeight="26.0" prefWidth="1024.0">
+                                 <children>
+                                              <Text fill="#e1d8d8" strokeType="OUTSIDE" strokeWidth="0.0" text="ADMIN" />
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="100.0" prefWidth="200.0" />
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin></VBox>
+                                <VBox prefHeight="48.0" prefWidth="520.0" VBox.vgrow="ALWAYS">
+                                    <children>
+                                        <VBox prefHeight="201.0" prefWidth="467.0">
+                                            <children>
+                                                <TextField fx:id="txtBreweryName" promptText="brewery name" />
+                                                <TextField fx:id="txtBreweryId" promptText="brewery id" />
+                                                <TextField fx:id="txtBeerName" promptText="beer name" />
+                                                <TextField fx:id="txtBeerId" promptText="beer id" />
+                                                <TextField fx:id="txtBeerColor" promptText="beer color" />
+                                                <TextField fx:id="txtBeerIbu" promptText="ibu" />
+                                                <TextField fx:id="txtBeerStyle" promptText="beer style" />
+                                                <TextField fx:id="txtBeerPrice" promptText="beer price" />
+                                            </children>
+                                        </VBox>
+                                        <TextField fx:id="txtBeerAlcohol" promptText="beer_alcohol" />
+                                        <TextField fx:id="txtBeerBlg" promptText="beer_blg" />
+                                        <TextField fx:id="txtBeerPremiere" promptText="beer_premiere" />
+                              <TextField fx:id="txtCustomerId" promptText="customer_id" />
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <HBox prefHeight="22.0" prefWidth="741.0">
+                                       <children>
+                                          <Button mnemonicParsing="false" onMouseClicked="#updateBreweryName" prefHeight="22.0" prefWidth="145.0" style="-fx-font-size: 11;" text="update brewery name">
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onMouseClicked="#deleteBrewery" prefHeight="22.0" prefWidth="112.0" style="-fx-font-size: 11;" text="delete brewery" />
+                                                      <Button mnemonicParsing="false" onAction="#fillById" prefHeight="22.0" prefWidth="103.0" style="-fx-font-size: 11;" text="fill by beer id">
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                          <Button mnemonicParsing="false" onMouseClicked="#deleteCustomer" prefHeight="26.0" prefWidth="132.0" text="delete customer">
+                                             <font>
+                                                <Font size="11.0" />
+                                             </font>
+                                          </Button>
+                                                      <Button mnemonicParsing="false" onAction="#clear" prefHeight="22.0" prefWidth="54.0" style="-fx-font-size: 11;" text="clear">
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                          </Button>
+                                       </children></HBox>
+                                 </children>
+                              </HBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin></VBox>
+                                <VBox prefHeight="36.0" prefWidth="561.0">
+                                    <children>
+                                        <HBox prefHeight="34.0" prefWidth="520.0">
+                                            <children>
+                                                <Button mnemonicParsing="false" onAction="#search" prefHeight="22.0" prefWidth="60.0" style="-fx-font-size: 11;" text="search">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin></Button>
+                                                <ComboBox fx:id="comboBoxSearch" prefHeight="22.0" prefWidth="147.0" promptText="search argument" style="-fx-font-size: 11;">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin></ComboBox>
+                                                <Button mnemonicParsing="false" onAction="#update" prefHeight="22.0" prefWidth="94.0" style="-fx-font-size: 11;" text="update beer">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin></Button>
+                                                <Button mnemonicParsing="false" onAction="#delete" prefHeight="22.0" prefWidth="89.0" style="-fx-font-size: 11;" text=" delete beer">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin></Button>
+                                                <Button mnemonicParsing="false" onAction="#searchAll" prefHeight="22.0" prefWidth="77.0" style="-fx-font-size: 11;" text="search all">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin></Button>
+                                                <Button mnemonicParsing="false" onMouseClicked="#add" prefHeight="26.0" prefWidth="78.0" style="-fx-font-size: 11;" text="add beer">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin></Button>
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin></VBox>
+                                <VBox prefHeight="275.0" prefWidth="520.0">
+                                    <children>
+                                        <TableView fx:id="beersTable" onMouseClicked="#add" prefHeight="272.0" prefWidth="520.0">
+                                            <columns>
+                                                <TableColumn fx:id="colBeerId" prefWidth="58.99998474121094" style="-fx-font-size: 11;" text="beer id" />
+                                                <TableColumn fx:id="colBeerName" prefWidth="109.0" style="-fx-font-size: 11;" text="name" />
+                                                <TableColumn fx:id="colBeerStyle" prefWidth="82.0" style="-fx-font-size: 11;" text="style" />
+                                                <TableColumn fx:id="colBeerIbu" minWidth="0.0" prefWidth="71.0" style="-fx-font-size: 11;" text="ibu" />
+                                                <TableColumn fx:id="colBeerPrice" prefWidth="44.0" style="-fx-font-size: 11;" text="price" />
+                                                <TableColumn fx:id="colBreweryId" prefWidth="112.0" style="-fx-font-size: 11;" text="brewery id" />
+                                                <TableColumn fx:id="colBeerColor" prefWidth="76.0" style="-fx-font-size: 11;" text="color" />
+                                                <TableColumn fx:id="colBreweryName" prefWidth="121.0" style="-fx-font-size: 11;" text="brewery_name" />
+                                                <TableColumn fx:id="colBeerAlcohol" prefWidth="75.0" style="-fx-font-size: 11;" text="alcohol" />
+                                                <TableColumn fx:id="colBeerBlg" prefWidth="55.0" style="-fx-font-size: 11;" text="blg" />
+                                                <TableColumn fx:id="colBeerPremiere" prefWidth="121.0" style="-fx-font-size: 11;" text="premiere date" />
+                                                <TableColumn fx:id="colAvgMark" prefWidth="75.0" style="-fx-font-size: 11;" text="avg_mark" />
+                                            </columns>
+                                        </TableView>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin></VBox>
+                            </children></VBox>
+                        <VBox prefHeight="604.0" prefWidth="542.0" style="-fx-background-color: #581845;" HBox.hgrow="ALWAYS">
+
+                            <children>
+                                <fx:include source="Title_Bar.fxml" />
+                                <VBox prefHeight="0.0" prefWidth="624.0" style="-fx-background-color: #900C3F;">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Information" textAlignment="CENTER" textFill="#e4d7d7">
+                                            <font>
+                                                <Font name="System Bold Italic" size="13.0" />
+                                            </font>
+                                            <padding>
+                                                <Insets left="10.0" />
+                                            </padding>
+                                        </Label>
+                                    </children></VBox>
+                                <VBox prefHeight="37.0" prefWidth="624.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label fx:id="labelInfo" text="nothing new" textFill="#e4d7d7" />
+                                    </children></VBox>
+                                <VBox prefHeight="46.0" prefWidth="626.0" style="-fx-background-color: #900C3F;">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <Label text="Mark manager" textFill="#e1dddd">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children></VBox>
+                        <HBox prefHeight="26.0" prefWidth="634.0">
+                           <children>
+                              <Button mnemonicParsing="false" onMouseClicked="#deleteMark" prefHeight="26.0" prefWidth="285.0" text="delete mark">
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Button>
+                              <TextField fx:id="txtMarkBeerId" promptText="beer_id" />
+                              <TextField fx:id="txtMarkCustomerId" prefHeight="26.0" prefWidth="152.0" promptText="customer_id" />
+                           </children>
+                        </HBox>
+                                <VBox prefHeight="346.0" prefWidth="593.0">
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                    <children>
+                                        <TableView fx:id="marksTable" prefHeight="227.0" prefWidth="593.0">
+                                 <columns>
+                                    <TableColumn fx:id="colMarkBeerId" prefWidth="75.0" style="-fx-font-size: 11;" text="beer_id" />
+                                    <TableColumn fx:id="colMarkCustomerId" prefWidth="105.0" style="-fx-font-size: 11;" text="customer_id" />
+                                    <TableColumn fx:id="colMark" prefWidth="78.0" style="-fx-font-size: 11;" text="Mark" />
+                                    <TableColumn fx:id="colComment" prefWidth="359.0" style="-fx-font-size: 11;" text="Comment" />
+                                 </columns></TableView>
+                                    </children></VBox>
+                                <VBox prefHeight="49.0" prefWidth="626.0" style="-fx-background-color: #900C3F;">
+                                    <children>
+                                        <Label text="beer styles" textFill="#e1dddd">
+                                            <font>
+                                                <Font name="System Bold" size="13.0" />
+                                            </font>
+                                            <VBox.margin>
+                                                <Insets left="10.0" top="5.0" />
+                                            </VBox.margin>
+                                        </Label>
+                                    </children>
+                                    <VBox.margin>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                    </VBox.margin>
+                                </VBox>
+                                <VBox prefHeight="300.0" prefWidth="636.0">
+                                    <children>
+                                        <TableView fx:id="stylesTable" prefHeight="266.0" prefWidth="626.0">
+                                            <columns>
+                                                <TableColumn fx:id="colStyle" prefWidth="263.0" text="Available Styles" />
+                                            </columns>
+                                            <VBox.margin>
+                                                <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                            </VBox.margin>
+                                        </TableView>
+                                    </children>
+                                </VBox>
+                            </children>
+                            <HBox.margin>
+                                <Insets left="10.0" />
+                            </HBox.margin>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </StackPane>
+      <BorderPane prefHeight="200.0" prefWidth="0.0" />
+    </children>
+</AnchorPane>
